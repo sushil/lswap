@@ -32,9 +32,9 @@ func (f *content) Set(value string) error {
 }
 
 func init() {
-	flag.StringVar(&from, "from", "", "folder where code currently is")
-	flag.StringVar(&to, "to", "", "folder where code will be moved")
-	flag.Var(&contents, "contents", "comma separated list of contents under `from` to move")
+	flag.StringVar(&from, "from", "", "source folder where code currently is")
+	flag.StringVar(&to, "to", "", "target folder where code will be moved")
+	flag.Var(&contents, "contents", "comma separated list of contents under source folder to move to target")
 }
 
 func main() {
